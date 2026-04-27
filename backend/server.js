@@ -24,7 +24,7 @@ const PORT = process.env.PORT || 5000;
 
 const ALLOWED_ORIGINS = [
   'http://localhost:5173',
-  'https://your-frontend.vercel.app', // replace with your real Vercel URL
+  'https://your-frontend.vercel.app', // replace with your real Vercel URL after deploy
   process.env.FRONTEND_URL,           // set this in Render environment variables
 ].filter(Boolean);
 
