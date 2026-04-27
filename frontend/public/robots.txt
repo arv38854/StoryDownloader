@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://storydownloader.app/sitemap.xml
+Sitemap: https://free-story-downloader.vercel.app/sitemap.xml

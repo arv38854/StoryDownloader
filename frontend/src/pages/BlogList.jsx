@@ -13,15 +13,15 @@ export default function BlogList() {
       />
       
       {/* Page Header */}
-      <div className="mb-20 text-center">
-        <h1 className="text-5xl md:text-6xl font-black mb-6 premium-gradient-text tracking-tight">Our Blog</h1>
-        <p className="text-slate-500 text-lg font-medium">Master the art of social media media retrieval with our expert guides.</p>
+      <div className="mb-12 sm:mb-20 text-center">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-black mb-3 sm:mb-6 premium-gradient-text tracking-tight">Our Blog</h1>
+        <p className="text-slate-500 text-sm sm:text-lg font-medium px-4">Master the art of social media retrieval with our expert guides.</p>
       </div>
 
       {/* Article Grid */}
-      <div className="grid gap-10 md:grid-cols-2">
+      <div className="grid gap-5 sm:gap-10 grid-cols-1 sm:grid-cols-2">
         {blogPosts.map(post => (
-          <article key={post.id} className="ultra-glass rounded-[2.5rem] p-10 flex flex-col group transition-all duration-500 hover:ring-2 hover:ring-indigo-500/30">
+          <article key={post.id} className="ultra-glass rounded-[1.5rem] sm:rounded-[2.5rem] p-6 sm:p-10 flex flex-col group transition-all duration-500 hover:ring-2 hover:ring-indigo-500/30">
             <div className="flex gap-4 mb-6">
               {post.tags.map(tag => (
                 <span key={tag} className="text-[10px] uppercase font-black tracking-[0.3em] text-indigo-600 bg-indigo-500/5 px-3 py-1.5 rounded-lg border border-indigo-500/10">

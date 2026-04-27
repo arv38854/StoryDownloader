@@ -29,6 +29,7 @@ const ALLOWED_ORIGINS = [
   'http://localhost:5173',
   'https://your-frontend.vercel.app', // replace with your real Vercel URL after deploy
   'https://story-downloader-one.vercel.app',
+  'https://free-story-downloader.vercel.app',
   process.env.FRONTEND_URL,           // set this in Render environment variables
 ].filter(Boolean);
 

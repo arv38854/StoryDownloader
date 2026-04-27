@@ -100,19 +100,19 @@ export default function Downloader() {
   return (
     <div className="min-h-screen text-slate-900 flex flex-col items-center relative overflow-hidden">
       <SEO
-        title="Story Downloader — Free Instagram, YouTube & Facebook Video Downloader"
-        description="Story Downloader: Download Instagram Reels, Stories, YouTube Shorts and Facebook videos free in HD. No login, no watermark, works on all devices instantly."
-        keywords="story downloader, instagram story downloader, instagram reel downloader, youtube shorts downloader, facebook video downloader, download instagram reels free, save instagram stories, video downloader free no watermark"
-        canonical="https://storydownloader.app"
+        title="Free Instagram, Facebook & YouTube Video Downloader | StoryDownloader"
+        description="Free Instagram Reel downloader, Facebook video downloader & YouTube Shorts downloader. Download HD videos instantly — no login, no watermark, no app needed."
+        keywords="instagram reel downloader, facebook video downloader, youtube shorts downloader, story downloader, download instagram reels free, save instagram stories, free video downloader no watermark"
+        canonical="https://free-story-downloader.vercel.app"
         structuredData={{
           '@context': 'https://schema.org',
           '@type': 'SoftwareApplication',
           name: 'StoryDownloader',
           operatingSystem: 'Web',
           applicationCategory: 'MultimediaApplication',
-          description: 'Download public Instagram reels, YouTube Shorts, and Facebook videos instantly. Free, no login required.',
+          description: 'Free Instagram Reel downloader, Facebook video downloader & YouTube Shorts downloader. No login, no watermark.',
           offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-          url: 'https://storydownloader.app',
+          url: 'https://free-story-downloader.vercel.app',
         }}
       />
 
@@ -125,38 +125,39 @@ export default function Downloader() {
       <div className="absolute top-[50%] left-[3%] w-24 h-24 rounded-full bg-gradient-to-br from-violet-400/10 to-blue-400/10 blur-2xl animate-premium-float pointer-events-none hidden lg:block" style={{ animationDelay: '5s' }} />
 
       {/* Hero Header */}
-      <div className="pt-12 pb-8 text-center relative z-10 px-4">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 text-xs font-bold uppercase tracking-widest mb-6 animate-pulse">
+      <div className="pt-8 pb-6 text-center relative z-10 px-4">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-4 sm:mb-6 animate-pulse">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
           </span>
           Pro Media Retrieval
         </div>
-        <h1 className="text-5xl md:text-6xl font-black tracking-tight mb-4 premium-gradient-text leading-tight md:leading-[1.1]">
-          Story <span className="text-indigo-600">Downloader</span>
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight mb-3 sm:mb-4 premium-gradient-text leading-tight">
+          Instagram, Facebook &amp; YouTube
+          <span className="block text-indigo-600">Video Downloader</span>
         </h1>
-        <p className="text-slate-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
-          The most powerful way to fetch high-bitrate media from <span className="text-indigo-900 underline decoration-indigo-200 decoration-2">Instagram</span>, <span className="text-red-600 underline decoration-red-200 decoration-2">YouTube</span>, and <span className="text-blue-600 underline decoration-blue-200 decoration-2">Facebook</span>.
+        <p className="text-slate-500 text-sm sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium px-2">
+          Free <strong className="text-indigo-900">Instagram Reel downloader</strong>, <strong className="text-red-600">YouTube Shorts downloader</strong> &amp; <strong className="text-blue-600">Facebook video downloader</strong> — HD quality, no login.
         </p>
       </div>
 
       {/* Platform quick-links */}
-      <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-10 relative z-10 px-4">
+      <div className="flex flex-wrap justify-center gap-2 sm:gap-4 md:gap-8 mb-8 relative z-10 px-4">
         {['youtube', 'instagram', 'facebook'].map((p) => (
-          <div key={p} className={`flex items-center gap-3 px-6 py-3 rounded-2xl ultra-glass transform hover:scale-105 transition-all duration-300 cursor-default group ${COLORS[p]}`}>
-            <div className="p-2 rounded-lg bg-white shadow-sm ring-1 ring-black/[0.05]">
+          <div key={p} className={`flex items-center gap-2 px-3 sm:px-6 py-2 sm:py-3 rounded-2xl ultra-glass transform hover:scale-105 transition-all duration-300 cursor-default group ${COLORS[p]}`}>
+            <div className="p-1.5 sm:p-2 rounded-lg bg-white shadow-sm ring-1 ring-black/[0.05]">
               {ICONS[p]}
             </div>
-            <span className="text-slate-700 font-bold tracking-tight group-hover:text-indigo-600 transition">{LABELS[p]}</span>
+            <span className="text-slate-700 text-xs sm:text-sm font-bold tracking-tight group-hover:text-indigo-600 transition">{LABELS[p]}</span>
           </div>
         ))}
       </div>
 
       {/* Main Glass Card */}
-      <div className="w-full max-w-2xl px-4 relative z-10 mb-16">
-        <div className="ultra-glass rounded-[2rem] p-1 md:p-1.5 shadow-2xl relative">
-          <div className="bg-white/80 backdrop-blur-sm rounded-[1.75rem] p-6 md:p-8">
+      <div className="w-full max-w-2xl px-3 sm:px-4 relative z-10 mb-10 sm:mb-16">
+        <div className="ultra-glass rounded-[1.5rem] sm:rounded-[2rem] p-1 shadow-2xl relative">
+          <div className="bg-white/80 backdrop-blur-sm rounded-[1.25rem] sm:rounded-[1.75rem] p-4 sm:p-6 md:p-8">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="relative group/input">
                 <input
@@ -178,7 +179,7 @@ export default function Downloader() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full premium-gradient-primary text-white font-bold py-4 rounded-2xl shadow-xl premium-button-glow transform hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-3 text-lg transition-all duration-300"
+                className="w-full premium-gradient-primary text-white font-bold py-3.5 sm:py-4 rounded-2xl shadow-xl premium-button-glow transform hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 sm:gap-3 text-base sm:text-lg transition-all duration-300"
               >
                 {loading ? (
                   <>
@@ -239,9 +240,18 @@ export default function Downloader() {
 
                 <div className="relative group/preview rounded-2xl overflow-hidden shadow-2xl bg-slate-200 ring-1 ring-black/[0.05]">
                   {result.mediaType === 'video' ? (
-                    <video src={result.downloadUrl} controls className="w-full max-h-[400px] object-contain bg-black" />
+                    <video
+                      src={result.downloadUrl}
+                      controls
+                      className="w-full max-h-[400px] object-contain bg-black"
+                      aria-label={`${result.platform} video preview`}
+                    />
                   ) : (
-                    <img src={result.downloadUrl} alt="Preview" className="w-full max-h-[400px] object-contain" />
+                    <img
+                      src={result.downloadUrl}
+                      alt={`${result.platform} media download preview — free ${result.platform} downloader`}
+                      className="w-full max-h-[400px] object-contain"
+                    />
                   )}
                 </div>
 
@@ -272,44 +282,48 @@ export default function Downloader() {
       </div>
 
       {/* ── About Tool ── */}
-      <section className="w-full max-w-4xl px-6 mb-20 relative z-10">
-        <div className="ultra-glass rounded-[2rem] p-8 md:p-12">
-          <h2 className="text-3xl font-black text-slate-900 mb-4 tracking-tight">What is StoryDownloader?</h2>
+      <section className="w-full max-w-4xl px-4 sm:px-6 mb-12 sm:mb-20 relative z-10">
+        <div className="ultra-glass rounded-[1.5rem] sm:rounded-[2rem] p-6 sm:p-8 md:p-12">
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-3 sm:mb-4 tracking-tight">Free Instagram, Facebook &amp; YouTube Video Downloader</h2>
           <p className="text-slate-600 leading-relaxed text-base md:text-lg">
-            StoryDownloader is a free, browser-based tool that lets you save publicly available videos and reels from
-            <strong className="text-slate-800"> Instagram</strong>, <strong className="text-slate-800">YouTube Shorts</strong>, and
-            <strong className="text-slate-800"> Facebook</strong> — instantly, with no account or software required.
-            Simply paste a link, and our server fetches the direct media URL in seconds. No files are stored on our servers,
-            no personal data is collected, and no watermarks are added. Whether you want to save a tutorial for offline
-            viewing, archive a memory, or compile content for personal use, StoryDownloader makes it effortless.
-            It works on any device — desktop, tablet, or mobile — right from your browser.
+            StoryDownloader is a free <strong className="text-slate-800">Instagram Reel downloader</strong>, <strong className="text-slate-800">Facebook video downloader</strong>, and <strong className="text-slate-800">YouTube Shorts downloader</strong> — all in one tool.
+            No login, no watermark, no app needed. Just paste any public video link and download it in HD quality in seconds.
+            Works on all devices — iPhone, Android, Windows, and Mac — directly from your browser.
+            We never store your URLs or media files. Your privacy is fully protected.
           </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link to="/instagram-story-downloader" className="text-xs font-bold text-pink-600 bg-pink-50 border border-pink-100 px-3 py-1.5 rounded-full hover:bg-pink-100 transition">Instagram Reel Downloader →</Link>
+            <Link to="/youtube-shorts-downloader" className="text-xs font-bold text-red-600 bg-red-50 border border-red-100 px-3 py-1.5 rounded-full hover:bg-red-100 transition">YouTube Shorts Downloader →</Link>
+            <Link to="/facebook-video-downloader" className="text-xs font-bold text-blue-600 bg-blue-50 border border-blue-100 px-3 py-1.5 rounded-full hover:bg-blue-100 transition">Facebook Video Downloader →</Link>
+          </div>
         </div>
       </section>
 
       {/* ── How It Works ── */}
-      <section className="w-full max-w-4xl px-6 mb-20 relative z-10">
-        <h2 className="text-3xl font-black text-slate-900 mb-8 tracking-tight text-center">How It Works</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <section className="w-full max-w-4xl px-4 sm:px-6 mb-12 sm:mb-20 relative z-10">
+        <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-6 sm:mb-8 tracking-tight text-center">How It Works</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
           {[
             { step: '1', icon: '🔗', title: 'Copy the URL', desc: 'Open Instagram, YouTube, or Facebook and copy the link of the public video or reel you want to save.' },
             { step: '2', icon: '📋', title: 'Paste & Submit', desc: 'Paste the URL into the input field above and click the Download Now button.' },
             { step: '3', icon: '⬇️', title: 'Download', desc: 'Preview the media and tap "Save to Device" to download it directly to your phone or computer.' },
           ].map(({ step, icon, title, desc }) => (
-            <div key={step} className="ultra-glass rounded-[1.5rem] p-7 flex flex-col items-start gap-3">
-              <div className="w-10 h-10 rounded-xl bg-indigo-600 text-white text-sm font-black flex items-center justify-center shrink-0">{step}</div>
-              <div className="text-2xl">{icon}</div>
-              <h3 className="font-black text-slate-900 text-lg">{title}</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">{desc}</p>
+            <div key={step} className="ultra-glass rounded-[1.5rem] p-5 sm:p-7 flex flex-row sm:flex-col items-start gap-4 sm:gap-3">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-indigo-600 text-white text-sm font-black flex items-center justify-center shrink-0">{step}</div>
+              <div>
+                <div className="text-xl sm:text-2xl mb-1 sm:mb-0">{icon}</div>
+                <h3 className="font-black text-slate-900 text-base sm:text-lg">{title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed mt-1">{desc}</p>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
       {/* ── Features ── */}
-      <section className="w-full max-w-4xl px-6 mb-20 relative z-10">
-        <h2 className="text-3xl font-black text-slate-900 mb-8 tracking-tight text-center">Features</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+      <section className="w-full max-w-4xl px-4 sm:px-6 mb-12 sm:mb-20 relative z-10">
+        <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-6 sm:mb-8 tracking-tight text-center">Features</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5">
           {[
             { icon: '⚡', title: 'Lightning Fast', desc: 'Get your download link in under 4 seconds, every time.' },
             { icon: '💰', title: 'Completely Free', desc: 'No subscriptions, no hidden fees. Free forever.' },
@@ -318,29 +332,30 @@ export default function Downloader() {
             { icon: '📱', title: 'All Devices', desc: 'Works perfectly on mobile, tablet, and desktop browsers.' },
             { icon: '🛁', title: 'No Watermarks', desc: 'Download clean original files with no added watermarks.' },
           ].map(({ icon, title, desc }) => (
-            <div key={title} className="ultra-glass rounded-[1.5rem] p-6">
-              <div className="text-2xl mb-3">{icon}</div>
-              <h3 className="font-black text-slate-900 mb-1">{title}</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">{desc}</p>
+            <div key={title} className="ultra-glass rounded-[1.25rem] sm:rounded-[1.5rem] p-4 sm:p-6">
+              <div className="text-xl sm:text-2xl mb-2 sm:mb-3">{icon}</div>
+              <h3 className="font-black text-slate-900 text-sm sm:text-base mb-1">{title}</h3>
+              <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* ── FAQ ── */}
-      <section className="w-full max-w-4xl px-6 mb-20 relative z-10">
-        <h2 className="text-3xl font-black text-slate-900 mb-8 tracking-tight text-center">Frequently Asked Questions</h2>
-        <div className="space-y-4">
+      <section className="w-full max-w-4xl px-4 sm:px-6 mb-12 sm:mb-20 relative z-10">
+        <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-6 sm:mb-8 tracking-tight text-center">Frequently Asked Questions</h2>
+        <div className="space-y-3 sm:space-y-4">
           {[
             { q: 'Is StoryDownloader safe to use?', a: 'Yes. We never ask for your social media credentials. We only process publicly available URLs and return a direct CDN link. No data is stored on our servers.' },
             { q: 'Is it completely free?', a: 'Absolutely. StoryDownloader is 100% free with no hidden charges, no premium tiers, and no signup required.' },
-            { q: 'Can I download private content?', a: 'No. Our tool only works with publicly accessible content. Private accounts, locked posts, and stories that require login cannot be downloaded.' },
-            { q: 'Which platforms are supported?', a: 'We currently support Instagram Reels & posts, YouTube Shorts, and Facebook videos & reels. More platforms may be added in the future.' },
-            { q: 'Does it work on mobile?', a: 'Yes. The tool is fully responsive and works on all modern browsers on iOS and Android devices.' },
+            { q: 'Can I download private content?', a: 'No. Our Instagram reel downloader, Facebook video downloader, and YouTube Shorts downloader only work with publicly accessible content.' },
+            { q: 'Which platforms are supported?', a: 'We support Instagram Reels & posts (instagram reel downloader), YouTube Shorts (youtube shorts downloader), and Facebook videos & reels (facebook video downloader).' },
+            { q: 'Does it work on mobile?', a: 'Yes. Our free video downloader is fully responsive and works on all modern browsers on iOS and Android devices — no app needed.' },
+            { q: 'Is there a watermark on downloaded videos?', a: 'No. We return the original file directly from the platform CDN — no watermarks, no re-encoding, no quality loss.' },
           ].map(({ q, a }) => (
-            <div key={q} className="ultra-glass rounded-[1.5rem] p-6">
-              <h3 className="font-black text-slate-900 mb-2">{q}</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">{a}</p>
+            <div key={q} className="ultra-glass rounded-[1.25rem] sm:rounded-[1.5rem] p-4 sm:p-6">
+              <h3 className="font-black text-slate-900 text-sm sm:text-base mb-1.5 sm:mb-2">{q}</h3>
+              <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">{a}</p>
             </div>
           ))}
         </div>
@@ -360,12 +375,12 @@ export default function Downloader() {
 
       <div className="w-full bg-indigo-950 pt-12 pb-40">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-10 sm:mb-16 gap-4 sm:gap-6">
               <div>
-                <h2 className="text-4xl md:text-5xl font-black text-white mb-2 tracking-tight">Featured Guides</h2>
-                <p className="text-indigo-300 font-medium">Master social media saving with our expert tutorials.</p>
+                <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-white mb-1 sm:mb-2 tracking-tight">Featured Guides</h2>
+                <p className="text-indigo-300 text-sm sm:text-base font-medium">Master social media saving with our expert tutorials.</p>
               </div>
-              <Link to="/blog" className="shrink-0 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-2xl font-bold transition-all flex items-center gap-3 backdrop-blur-xl border border-white/10 group">
+              <Link to="/blog" className="shrink-0 bg-white/10 hover:bg-white/20 text-white px-5 sm:px-8 py-3 sm:py-4 rounded-2xl font-bold transition-all flex items-center gap-2 sm:gap-3 backdrop-blur-xl border border-white/10 group text-sm sm:text-base">
                 Browse Repository 
                 <span className="w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300">
                   <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
@@ -373,8 +388,8 @@ export default function Downloader() {
               </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-              <article className="ultra-glass-dark p-10 rounded-[2.5rem] transition-all duration-500 hover:ring-2 hover:ring-indigo-500/50 flex flex-col group">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
+              <article className="ultra-glass-dark p-6 sm:p-10 rounded-[1.5rem] sm:rounded-[2.5rem] transition-all duration-500 hover:ring-2 hover:ring-indigo-500/50 flex flex-col group">
                   <div className="flex items-center gap-2 mb-6">
                     <span className="text-[10px] uppercase tracking-[0.3em] text-indigo-400 font-black">Meta / Instagram</span>
                     <div className="h-px flex-1 bg-white/10" />

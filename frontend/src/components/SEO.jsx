@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 
 const SITE_NAME = 'StoryDownloader';
-const SITE_URL = 'https://storydownloader.app';
+const SITE_URL = 'https://free-story-downloader.vercel.app';
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
 
 export default function SEO({

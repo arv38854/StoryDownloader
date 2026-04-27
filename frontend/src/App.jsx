@@ -18,12 +18,12 @@ function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 p-4 z-50 transition-all duration-300">
       <div className="max-w-6xl mx-auto ultra-glass rounded-2xl px-6 py-4 flex items-center justify-between shadow-2xl">
-        <Link to="/" className="text-2xl font-black tracking-tighter text-slate-900 hover:opacity-80 transition group">
-           Story<span className="text-indigo-600 group-hover:text-indigo-500 transition">Downloader</span>
+        <Link to="/" className="text-lg sm:text-2xl font-black tracking-tighter text-slate-900 hover:opacity-80 transition group">
+          Story<span className="text-indigo-600 group-hover:text-indigo-500 transition">Downloader</span>
         </Link>
-        <div className="flex gap-8 items-center">
-           <Link to="/" className="text-sm font-black text-slate-600 hover:text-indigo-600 transition uppercase tracking-widest">Tool</Link>
-           <Link to="/blog" className="text-sm font-black text-slate-600 hover:text-indigo-600 transition uppercase tracking-widest">Blog</Link>
+        <div className="flex gap-4 sm:gap-8 items-center">
+          <Link to="/" className="text-xs sm:text-sm font-black text-slate-600 hover:text-indigo-600 transition uppercase tracking-widest">Tool</Link>
+          <Link to="/blog" className="text-xs sm:text-sm font-black text-slate-600 hover:text-indigo-600 transition uppercase tracking-widest">Blog</Link>
         </div>
       </div>
     </nav>

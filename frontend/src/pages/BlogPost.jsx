@@ -24,7 +24,7 @@ export default function BlogPost() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-20 relative z-10">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-20 relative z-10">
       <SEO
         title={post.title}
         description={post.excerpt}
@@ -48,7 +48,7 @@ export default function BlogPost() {
             </span>
           ))}
         </div>
-        <h1 className="text-5xl md:text-6xl font-black mb-8 leading-[1.1] premium-gradient-text tracking-tight">{post.title}</h1>
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-black mb-6 sm:mb-8 leading-tight premium-gradient-text tracking-tight">{post.title}</h1>
         <div className="flex items-center gap-4 text-slate-400 font-bold text-xs uppercase tracking-widest pb-10 border-b border-slate-100">
           <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center">
              <svg className="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
@@ -62,7 +62,7 @@ export default function BlogPost() {
         <AdPlaceholder size="banner" />
       </div>
 
-      <div className="ultra-glass rounded-[3rem] p-10 md:p-16 mb-8 shadow-2xl">
+      <div className="ultra-glass rounded-[1.5rem] sm:rounded-[3rem] p-6 sm:p-10 md:p-16 mb-8 shadow-2xl">
         <div 
           className="prose max-w-none prose-h2:text-3xl prose-h2:font-black prose-h2:mt-16 prose-h2:mb-6 prose-p:text-slate-600 prose-p:text-lg prose-p:leading-relaxed prose-p:mb-8 prose-a:text-indigo-600 prose-a:font-bold prose-li:text-slate-600 prose-strong:text-slate-900 prose-code:text-indigo-600 prose-code:bg-indigo-500/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-img:rounded-[2rem]"
           dangerouslySetInnerHTML={{ __html: post.content }}
@@ -80,15 +80,15 @@ export default function BlogPost() {
       </div>
 
       {/* Try Now CTA */}
-      <div className="bg-indigo-600 rounded-[3rem] p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10 shadow-3xl shadow-indigo-600/30 text-white relative overflow-hidden group">
+      <div className="bg-indigo-600 rounded-[1.5rem] sm:rounded-[3rem] p-7 sm:p-12 md:p-16 flex flex-col md:flex-row items-start sm:items-center justify-between gap-6 sm:gap-10 shadow-2xl text-white relative overflow-hidden group">
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2 group-hover:bg-white/20 transition duration-700" />
         <div className="relative z-10">
-          <h2 className="text-4xl font-black mb-4 leading-tight tracking-tight">Ready to try it yourself?</h2>
-          <p className="text-indigo-100 text-lg font-medium opacity-80">Use our professional-grade downloader tool — no sign-up, no hassle.</p>
+          <h2 className="text-2xl sm:text-4xl font-black mb-2 sm:mb-4 leading-tight tracking-tight">Ready to try it yourself?</h2>
+          <p className="text-indigo-100 text-sm sm:text-lg font-medium opacity-80">Use our free downloader — no sign-up, no hassle.</p>
         </div>
         <Link 
           to="/"
-          className="relative z-10 shrink-0 bg-white text-indigo-600 hover:bg-indigo-50 font-black px-12 py-5 rounded-[1.5rem] transition-all duration-300 shadow-2xl transform hover:scale-105 active:scale-95 flex items-center gap-3 text-lg"
+          className="relative z-10 shrink-0 bg-white text-indigo-600 hover:bg-indigo-50 font-black px-7 sm:px-12 py-4 sm:py-5 rounded-[1.25rem] sm:rounded-[1.5rem] transition-all duration-300 shadow-2xl transform hover:scale-105 active:scale-95 flex items-center gap-2 sm:gap-3 text-base sm:text-lg"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
