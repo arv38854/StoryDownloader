@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment variables
+.env.local
+.env.*.local
+
+# Build output — Vercel builds this itself
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+logs/
+
+# Vercel CLI
+.vercel
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
