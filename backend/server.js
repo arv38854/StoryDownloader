@@ -9,11 +9,11 @@ import rateLimit from 'express-rate-limit';
 
 // ─── Rate Limiter Configuration ──────────────────────────────────────────────
 const downloadLimiter = rateLimit({
-  windowMs: 24 * 60 * 60 * 1000, // 24 hours in milliseconds
-  max: 5, // Limit each IP to 5 requests per windowMs
+  windowMs: 24 * 60 * 60 * 1000, // 24 hours
+  max: 10, // 20 requests per IP per day
   message: {
     success: false,
-    error: 'You have reached your daily limit of 5 downloads per day. Please try again tomorrow.',
+    error: 'You have reached your daily download limit. Please try again tomorrow.',
   },
   standardHeaders: true,
   legacyHeaders: false,
@@ -21,6 +21,9 @@ const downloadLimiter = rateLimit({
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// Trust Render/proxy so rate limiter uses real client IP
+app.set('trust proxy', 1);
 
 const ALLOWED_ORIGINS = [
   'http://localhost:5173',
