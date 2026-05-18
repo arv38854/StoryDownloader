@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
+import axios from 'axios';
 // Heartbeat to force reload: 2026-04-17T15:43:00
 import { detectPlatform } from './utils/detectPlatform.js';
 import { extractInstagram, extractFacebook, extractYoutube } from './utils/extractMedia.js';
@@ -120,6 +121,38 @@ app.post('/fetch/instagram', downloadLimiter, async (req, res) => {
   } catch (err) {
     console.error('[Instagram API Error]', err.message);
     return res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// ─── GET /fetch/download ─────────────────────────────────────────────────────
+// Proxies media requests to bypass CORS and force a download with Content-Disposition
+app.get('/fetch/download', async (req, res) => {
+  const { url, filename } = req.query;
+  
+  if (!url) {
+    return res.status(400).send('No URL provided.');
+  }
+
+  try {
+    const response = await axios({
+      method: 'GET',
+      url: url,
+      responseType: 'stream',
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
+      },
+    });
+
+    const type = response.headers['content-type'] || 'application/octet-stream';
+    const fallbackName = type.includes('video') ? 'download.mp4' : 'download.jpg';
+    
+    res.setHeader('Content-Disposition', `attachment; filename="${filename || fallbackName}"`);
+    res.setHeader('Content-Type', type);
+
+    response.data.pipe(res);
+  } catch (err) {
+    console.error('[Proxy Download Error]', err.message);
+    res.status(500).send('Failed to download media. The link might have expired.');
   }
 });
 

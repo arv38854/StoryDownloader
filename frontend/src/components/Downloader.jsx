@@ -256,8 +256,8 @@ export default function Downloader() {
                 </div>
 
                 <a
-                  href={result.downloadUrl}
-                  target="_blank"
+                  href={`${import.meta.env.VITE_API_URL || ''}/fetch/download?url=${encodeURIComponent(result.downloadUrl)}&filename=${result.platform}-${Date.now()}.${result.mediaType === 'video' ? 'mp4' : 'jpg'}`}
+                  target="_self"
                   rel="noopener noreferrer"
                   download
                   className="w-full bg-slate-900 text-white hover:bg-black font-bold py-4 rounded-2xl transition-all duration-300 shadow-2xl flex items-center justify-center gap-2 group/dl premium-button-glow"
