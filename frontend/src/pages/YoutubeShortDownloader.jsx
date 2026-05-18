@@ -16,6 +16,7 @@ export default function YoutubeShortDownloader() {
       <SEO
         title="YouTube Shorts Downloader — Free HD, No Watermark"
         description="Download YouTube Shorts in HD quality for free. No login, no watermark, no app needed. Works on all devices instantly."
+        keywords="youtube shorts downloader, download youtube shorts, yt shorts saver, save youtube shorts to camera roll, youtube short video download"
         canonical="https://storydownloader.app/youtube-shorts-downloader"
         structuredData={{
           '@context': 'https://schema.org',

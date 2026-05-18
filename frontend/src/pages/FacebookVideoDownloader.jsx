@@ -16,6 +16,7 @@ export default function FacebookVideoDownloader() {
       <SEO
         title="Facebook Video Downloader — Free HD, No Login Required"
         description="Download Facebook videos and Reels online free in HD quality. Supports fb.watch links. No login, no watermark, works on all devices."
+        keywords="facebook video downloader, fb story downloader, download facebook reels, facebook reel downloader, fb video saver, download fb live video, facebook story saver"
         canonical="https://storydownloader.app/facebook-video-downloader"
         structuredData={{
           '@context': 'https://schema.org',

@@ -102,7 +102,7 @@ export default function Downloader() {
       <SEO
         title="Free Instagram, Facebook & YouTube Video Downloader | StoryDownloader"
         description="Free Instagram Reel downloader, Facebook video downloader & YouTube Shorts downloader. Download HD videos instantly — no login, no watermark, no app needed."
-        keywords="instagram reel downloader, facebook video downloader, youtube shorts downloader, story downloader, download instagram reels free, save instagram stories, free video downloader no watermark"
+        keywords="story downloader, instagram story downloader, facebook video downloader, youtube shorts downloader, ig story viewer, download instagram stories, save ig story, fb reel downloader, download youtube shorts, story saver, free video downloader, download instagram reels free, save instagram stories, free video downloader no watermark"
         canonical="https://free-story-downloader.vercel.app"
         structuredData={{
           '@context': 'https://schema.org',

@@ -10,7 +10,7 @@ export default function SEO({
   canonical,
   type = 'website',
   image,
-  keywords,
+  keywords = 'story downloader, instagram story downloader, facebook video downloader, youtube shorts downloader, ig story viewer, download instagram stories, save ig story, fb reel downloader, download youtube shorts, story saver, free video downloader',
   author = 'StoryDownloader',
   twitterSite = '@storydownloader',
   noIndex = false,

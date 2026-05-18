@@ -16,6 +16,7 @@ export default function InstagramStoryDownloader() {
       <SEO
         title="Instagram Story & Reel Downloader — Free HD, No Login"
         description="Download Instagram Reels, Stories, and videos online free in HD quality. No login required, no watermark, works on all devices."
+        keywords="instagram story downloader, download instagram stories, ig story viewer, save instagram stories, igtv downloader, anon ig story viewer, instagram reel downloader, save ig story, insta story saver, download instagram reels free"
         canonical="https://storydownloader.app/instagram-story-downloader"
         structuredData={{
           '@context': 'https://schema.org',
