@@ -52,11 +52,14 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-2xl font-bold text-slate-900 mb-3 flex items-center gap-2">
                 <span className="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-black">3</span>
-                Cookies
+                Cookies &amp; Advertising
               </h2>
               <p className="text-slate-600 leading-relaxed">
-                We do not use tracking cookies or analytics. No third-party advertising cookies are placed on your device.
-                Our site is completely cookie-free.
+                We use <strong className="text-slate-800">Google AdSense</strong> to display advertisements on this site.
+                Google AdSense may use cookies and web beacons to serve ads based on your prior visits to this and other websites.
+                You can opt out of personalised advertising by visiting{' '}
+                <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-indigo-600 font-semibold hover:underline">Google Ads Settings</a>.
+                We do not use any other tracking cookies or analytics beyond what Google AdSense requires.
               </p>
             </section>
 
@@ -70,6 +73,11 @@ export default function PrivacyPolicy() {
               <p className="text-slate-600 leading-relaxed">
                 Our service interacts with third-party platforms (Instagram, Facebook, YouTube) solely to retrieve
                 publicly available media. We are not affiliated with, endorsed by, or connected to these platforms.
+                We also use <strong className="text-slate-800">Google AdSense</strong> (a service by Google LLC) to
+                display ads. Google's use of advertising cookies enables it to serve ads based on your visits to this
+                site and other sites on the Internet. See{' '}
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-indigo-600 font-semibold hover:underline">Google's Privacy Policy</a>{' '}
+                for more information.
               </p>
             </section>
 

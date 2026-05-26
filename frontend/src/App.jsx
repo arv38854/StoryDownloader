@@ -13,6 +13,7 @@ import TermsOfService from './pages/TermsOfService';
 
 import ScrollToTop from './components/ScrollToTop';
 import Sidebar from './components/Sidebar';
+import CookieBanner from './components/CookieBanner';
 
 function Navbar() {
   return (
@@ -39,6 +40,7 @@ export default function App() {
       <Navbar />
       <Sidebar />
       <ScrollToTop />
+      <CookieBanner />
       
       <main className="flex-grow pt-24">
         <Routes>

@@ -64,8 +64,8 @@ export default function AboutUs() {
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Our Mission</h2>
             <p className="text-slate-600 leading-relaxed text-base">
               We believe saving content you love should be simple and fast. Our goal is to provide a clean,
-              no-nonsense tool that works in seconds — no ads, no bloat, no tracking. Built by developers,
-              for everyone.
+              no-nonsense tool that works in seconds — no bloat, no tracking. Built by developers,
+              for everyone. The site is supported by non-intrusive Google ads that keep it free forever.
             </p>
           </section>
 
